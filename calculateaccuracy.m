@@ -1,5 +1,7 @@
+%This program calculates the correlation coefficient between the predicted sequence of the test EEG and the original sequence to accomplish the classification task. 
+%The 'vmcresult' represents the multi-target outcomes, while the 'v01cresult' denotes the single-target outcomes.
 clear 
-subname={'j','t','gyx','hlt','rj','yxw','wt','xl','ljm','h','gxx','gm','zxj','tjc','p','m','sna' ,'hlj'};%'j','t','gyx','hlt','rj','yxw','wt','xl','ljm','h','gxx','gm','zxj','tjc','p','m','sna' ,'hlj'
+subname={'j','t','gyx','hlt','rj','yxw','wt','xl','ljm','h','gxx','gm','zxj','tjc','p','m','sna' ,'hlj'};
 for sub=1:length(subname)
 load([subname{sub},'vmcresult.mat']);
 load('champion_sequencetest.mat')
@@ -34,9 +36,3 @@ bestAccuracy = 0;
 
     accuracys(sub)=accuracy;
 end
-
-
-
-
-
-
