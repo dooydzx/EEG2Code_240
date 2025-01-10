@@ -1,5 +1,5 @@
 A 240-Target VEP-Based BCI System Employing Narrow-Band Random Sequences
-We have provided here an algorithm for offline analysis of the accuracy rate of 240 targets using the method described in the text. The data can be found at https://zenodo.org/records/14587455.
+We have provided here an algorithm for offline analysis of the accuracy rate of 240 targets using the method described in the text. 
 
 
 STEP:
