@@ -19,8 +19,7 @@ he stimulus sequences used in the training and testing phases of the experiment 
 DATA
 
 Data can be fonded in https://zenodo.org/records/14587455.
-The data for single-target and multi-target tests from 18 subjects are provided. Each file contains the training and testing data for one subject. The files labeled `01c` represent single-target test data, while those labeled `mc` represent multi-target test data. Each file includes:
-- `test_data_x` of size 240 × 21 × 1170, representing the test EEG data (240 classes × 21 channels × 1170 data points).
-- `train_data_y` of size  360 × 1000, representing the stimulus sequences during the training phase (30 sequences repeated 12 times=360 × 1000 data points).
-- `train_data_x` of size 360× 21 × 1170,representing training EEG data (30*12=360 × 21 channels × 1000 data points).
-This data structure is designed to support the training and testing of the EEG2Code algorithm.
+The data includes single-target training, single-target testing, and multi-target testing data from 18 subjects.
+The three files allSubjects_trainonedata.mat, allSubjects_testonedata.mat, and allSubjects_testmultidata.mat contain the single-target training, single-target testing, and multi-target testing data for all subjects, respectively. The data is stored in the file in the form of a struct, where the structure names represent the 18 subjects. And includes data from 1 second before the stimulus to 1 second after the stimulus for each trial. No preprocessing was performed except for a 50Hz notch filter during data acquisition.
+The size of the data for each subject in allSubjects_trainonedata.mat is 360x21x3000 , representing 360 trials * 21 channels * 3000 data points (1 second before stimulus, 1 second stimulus, and 1 second after stimulus at a 1000 Hz sampling rate).
+The size of the data for each subject in allSubjects_testonedata.mat and allSubjects_testmultidata.mat is 240x21x3000 , representing 240 trials * 21 channels * 3000 data points (1 second before stimulus, 1 second stimulus, and 1 second after stimulus at a 1000 Hz sampling rate). The categories of the stimuli are arranged in order and correspond one-to-one with the sequence in champion_sequencetest.mat. 
